@@ -95,7 +95,8 @@ def main(args):
     virtualenv = args.virtualenv
     if virtualenv:
         print("Adding a virtualenv...")
-        virtualenv_exe = which('pyvenv')
+        virtualenv_exe = which('virtualenv')
+        print virtualenv_exe
         if virtualenv_exe:
             output, error = subprocess.Popen(
                 [virtualenv_exe, os.path.join(fullpath, 'env')],
